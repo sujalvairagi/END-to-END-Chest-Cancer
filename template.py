@@ -1,14 +1,13 @@
-import os 
+import os
 from pathlib import Path
 import logging
 
+logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
-logging.basicConfig(level=logging.INFO,format='[%(ascitime)s]:%(message)s:')
 
+project_name = "BREAST CANCER DETECTION WITH CNN"
 
-project_name="CHEST CANCER CLASSIFIER USING CNN      "
-
-list_of_file=  [
+list_of_files = [
     ".github/workflows/.gitkeep",
     f"src/{project_name}/__init__.py",
     f"src/{project_name}/components/__init__.py",
@@ -25,4 +24,27 @@ list_of_file=  [
     "setup.py",
     "research/trials.ipynb",
     "templates/index.html"
+
+
 ]
+
+
+
+for filepath in list_of_files:
+    filepath = Path(filepath)
+    filedir, filename = os.path.split(filepath)
+
+
+    if filedir !="":
+        os.makedirs(filedir, exist_ok=True)
+        logging.info(f"Creating directory; {filedir} for the file: {filename}")
+
+    if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
+        with open(filepath, "w") as f:
+            pass
+            logging.info(f"Creating empty file: {filepath}")
+
+
+    else:
+        logging.info(f"{filename} is already exists")
+print("creation completed")        
