@@ -3,4 +3,31 @@
 3. creatd requirements.txt by changing the versions of all libraries ac to stablea versions and better compatilbilty with python 3.10.8
 
 
-4.did 
+4.while designing 1. Pipeline Layer   → orchestration (what runs first, second, third)
+2. Component Layer  → actual ML work
+3. Utility Layer    → helpers (common)
+
+
+2. What problem does setup.py solve?
+The problem:
+
+You have code in src/cnnClassifier/
+Python needs to know:
+
+Where is this package?
+
+What is its name?
+
+How can it be imported from anywhere?
+
+How can it be installed on another machine?
+
+That is not automatic.
+
+setup.py answers exactly that.
+
+
+6.configbox to get d.key to get the asame as d["key"]
+configbox dictionary type it becomes 
+
+7.ENSURE annotation for production level for amtching annotation type
