@@ -31,3 +31,21 @@ setup.py answers exactly that.
 configbox dictionary type it becomes 
 
 7.ENSURE annotation for production level for amtching annotation type
+
+
+8. project is package based and driven by configurationn not code chanes ,,, thaat is why there will be nmany YAML files 
+
+
+config.yaml	 system structured
+params.yaml	How model be trained
+secrets.yaml	sensitive values system need
+dvc.yaml	What is the reproducible pipeline
+workflows/*.yml	When should automation runn
+
+
+9.google drive for storing data instead of s3 bucket 
+
+10. clasify the daat asource natly file or folder link, private or public link , downlaod once or stream . ths creates issue in the code .
+    Most bugs in ML pipelines are data access problems, not model problems.
+
+11.
